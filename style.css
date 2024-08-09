@@ -1,0 +1,32 @@
+ h2{
+    color: blue;
+    background-color: aqua;
+}
+
+body{
+    background-color:white;
+} 
+
+.box{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin: 5px;
+    text-align: center;
+    background-color: aqua;
+    display: inline-block;
+}
+
+
+#div2{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    color: white;
+    margin: 5px;
+    text-align: center;
+    background-color: rgb(78, 25, 157);
+    display: inline-block;
+}
+
+
