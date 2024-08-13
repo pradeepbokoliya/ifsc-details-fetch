@@ -24,6 +24,7 @@ const IMPS = document.querySelector(".col-IMPS");
 
 
 
+
 const getData = async() => {
     const inputValue = input.value;
     let response = await fetch(url + inputValue);
@@ -51,6 +52,8 @@ const getData = async() => {
 
 
 }
+
+
 
 
 btn.addEventListener("click", getData);
