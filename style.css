@@ -29,4 +29,7 @@ body{
     display: inline-block;
 }
 
+.row-cols-1{
+    visibility:hidden;}
+
 

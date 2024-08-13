@@ -1,20 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java Script lang</title>
-    <!-- <link rel="icon" type="image/x-icon" href="/js.ico"> -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>IFSC lookup Tool</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0 bd-example-row">
 
-<body>
-    <input type="text" id="myInput">
-    <button id="btn">Get IFSC Details</button><br>
-    <P id="para"></P>
+    <!-- Example Code -->
+    
+        
+    <div class="container text-center">
+        <input type="text" id="myInput">
+        <button id="btn">Get IFSC Details</button><br><br>
 
+      <div class="row-cols-1">
+        <div class="col-BANK">Bank</div>
+        <div class="col-IFSC">Column</div>
+        <div class="col-BANKCODE">Column</div>
+        <div class="col-BRANCH">Column</div>
+        <div class="col-ADDRESS">Column</div>
+        <div class="col-STATE">Column</div>
+        <div class="col-CITY">Column</div>
+        <div class="col-DISTRICT">Column</div>
+        <div class="col-ISO3166">Column</div>
+        <div class="col-MICR">Column</div>
+        <div class="col-SWIFT">Column</div>
+        <div class="col-CENTRE">Column</div>
+        <div class="col-CONTACT">Column</div>
+        <div class="col-UPI">Column</div>
+        <div class="col-NEFT">Column</div>
+        <div class="col-RTGS">Column</div>
+        <div class="col-IMPS">Column</div>
+        
+
+      </div>
+    </div>
+   
+      
+    <!-- End Example Code -->
     <script src="api.js"></script>
-</body>   
-
-
+  </body>
 </html>
