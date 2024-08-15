@@ -1,24 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFSC Lookup Toolkit</title>
+    <script defer src="api.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-    <title>IFSC lookup Tool</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  </head>
-  <body class="p-3 m-0 border-0 bd-example m-0 border-0 bd-example-row">
+</head>
 
-    <!-- Example Code -->
-    
-        
+<body class="p-3 m-0 border-0 bd-example m-0 border-0 bd-example-row">
+
+<body>
     <div class="container text-center">
-        <input type="text" id="myInput">
-        <button id="btn">Get IFSC Details</button><br><br>
-
-      <div class="row-cols-1">
+    <h1>Enter IFSC Code to Check All Details</h1>
+    <label for="ifsc">IFSC:</label>
+    <input type="text" id="ifsc" name="ifsc" required>
+    <button id="btn">Get IFSC Details</button>
+    <h2>IFSC Lookup Tool</h2>
+    <p id="result"></p>
+    <div class="row-cols-1">
         <div class="col-BANK">Bank</div>
         <div class="col-IFSC">Column</div>
         <div class="col-BANKCODE">Column</div>
@@ -36,13 +40,7 @@
         <div class="col-NEFT">Column</div>
         <div class="col-RTGS">Column</div>
         <div class="col-IMPS">Column</div>
-        
-
       </div>
     </div>
-   
-      
-    <!-- End Example Code -->
-    <script src="api.js"></script>
-  </body>
+</body>
 </html>
