@@ -34,6 +34,7 @@ const IMPS = document.querySelector(".col-IMPS");
             resultParagraph.textContent = 'Please Enter IFSC Code.';
             resultParagraph.style.color = 'red'; // Optional: Change text color to red for error
             resultParagraph.style.visibility = "visiable";
+            alert("Enter IFSC Code")
         } else {
                         
             let response = await fetch(url + ifsc);
