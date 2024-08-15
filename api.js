@@ -21,13 +21,15 @@ const UPI = document.querySelector(".col-UPI");
 const NEFT = document.querySelector(".col-NEFT");
 const RTGS = document.querySelector(".col-RTGS");
 const IMPS = document.querySelector(".col-IMPS");
+const resultParagraph = document.getElementById('result');
+const form = document.getElementById('myfm');
 
-    const resultParagraph = document.getElementById('result');
 
-  
-    btn.addEventListener('click', async () => {
+    // document.addEventListener('DOMContentLoaded', function() {
+    form.addEventListener('submit', async (event) => {
         // Get values from the input fields
-        const ifsc = document.querySelector('#ifsc').value.trim();
+        event.preventDefault();
+        const ifsc = document.querySelector('#ifsc').value;
 
         // Validate input fields
         if (ifsc === '') {
