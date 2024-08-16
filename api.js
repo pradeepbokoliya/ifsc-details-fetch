@@ -24,27 +24,35 @@ const IMPS = document.querySelector(".col-IMPS");
 const resultParagraph = document.getElementById('result');
 const form = document.getElementById('myfm');
 
+let regex = new RegExp(/^[A-Z]{4}0[A-Z0-9]{6}$/);
+
+
 
     // document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', async (event) => {
         // Get values from the input fields
         event.preventDefault();
-        const ifsc = document.querySelector('#ifsc').value;
+        const ifsc1 = document.querySelector('#ifsc').value;
+        const ifsc = ifsc1.toUpperCase();
 
         // Validate input fields
         if (ifsc === '') {
             resultParagraph.textContent = 'Please Enter IFSC Code.';
             resultParagraph.style.color = 'red'; // Optional: Change text color to red for error
-            resultParagraph.style.visibility = "visiable";
             alert("Enter IFSC Code")
-        } else {
-                        
+            resultParagraph.style.visibility = "visiable";
+            cls.style.visibility = "hidden";
+        } 
+        if (regex.test(ifsc) == true) {           
             let response = await fetch(url + ifsc);
             let data = await response.json()
             if(!response.ok){
+                resultParagraph.style.visibility = "visiable";
                 cls.style.visibility = "hidden";
-                resultParagraph.style.visibility = "hidden";
-               alert(data)
+                resultParagraph.textContent = `Error : ${data}`;
+                resultParagraph.style.color = 'red'; // Optional: Change text color to red for error               alert(data)
+                alert(data)
+                
             }
             else{
            
@@ -67,10 +75,14 @@ const form = document.getElementById('myfm');
             IMPS.innerText = `Bank IMPS : ${data.IMPS}`;
             cls.style.visibility = "visible";
             resultParagraph.style.visibility = "hidden";
+        }  
         }
-
-
-            
+        else{
+            alert("Enter Valid IFSC");
+            resultParagraph.textContent = `Enter Valid IFSC Code`;
+            resultParagraph.style.color = 'red'; // Optional: Change text color to red for error
+            resultParagraph.style.visibility = "visiable";
+            cls.style.visibility = "hidden";
 
         }
     });
